@@ -4,6 +4,15 @@
 一个方便的颜色主题组件
 
 [![Build Status][travis-svg]][travis-url]
+[![npm download][download-img]][download-url]
+[![license][license-img]][license-url]
+
+[travis-svg]: https://travis-ci.org/FengShangWuQi/color-theme.svg
+[travis-url]: https://travis-ci.org/FengShangWuQi/color-theme
+[download-img]: https://img.shields.io/npm/dt/color-theme.svg
+[download-url]: https://www.npmjs.com/package/color-theme
+[license-img]: https://img.shields.io/npm/l/color-theme.svg
+[license-url]: https://github.com/FengShangWuQi/color-theme/blob/master/LICENSE
 
 ## Demo
 - [切换 ECharts 图表颜色主题](https://fengshangwuqi.github.io/color-theme-demo/)
@@ -12,6 +21,7 @@
 ```
 yarn add color-theme
 ```
+[![color-theme](https://nodei.co/npm/color-theme.png)](https://npmjs.org/package/color-theme)
 
 ## 使用
 ```javaScipt
@@ -74,6 +84,3 @@ import ColorTheme from 'color-theme';
 
 ## LICENSE
 MIT@[fengshangwuqi](https://github.com/FengShangWuQi)
-
-[travis-svg]: https://travis-ci.org/FengShangWuQi/color-theme.svg
-[travis-url]: https://travis-ci.org/FengShangWuQi/color-theme
