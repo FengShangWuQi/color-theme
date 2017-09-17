@@ -39,7 +39,7 @@ class ColorThemeItem extends Component {
   }
 
   /** 处理主题 */
-  handleThemeChange () => {
+  handleThemeChange = () => {
     const { id, color, backgroundColor } = this.props;
 
     this.props.onColorChange(color);
@@ -50,7 +50,7 @@ class ColorThemeItem extends Component {
   }
 
   /** 增加色块 */
-  handleAdd () => {
+  handleAdd = () => {
     if (!this.state.isRemove) {
       this.props.onAddChange(this.props.color);
     }
@@ -80,7 +80,7 @@ class ColorThemeItem extends Component {
   }
 
   /** 删除色块 */
-  handleDelete () => {
+  handleDelete = () => {
     const { isRemove, removeItems } = this.state;
 
     if (isRemove && removeItems.length !== 0) {
