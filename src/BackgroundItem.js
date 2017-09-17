@@ -4,13 +4,8 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 class BackgroundItem extends Component {
-  constructor() {
-    super();
-    this.handleBgChange = this.handleBgChange.bind(this);
-  }
-
   /** 处理背景 */
-  handleBgChange() {
+  handleBgChange = () => {
     const { background, id } = this.props;
 
     this.props.onBgChange(background);

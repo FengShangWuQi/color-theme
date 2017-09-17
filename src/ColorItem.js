@@ -18,7 +18,6 @@ class ColorItem extends Component {
 
   constructor() {
     super();
-    this.handleDelete = this.handleDelete.bind(this);
     this.state = {
       style: {},
       active: false,
@@ -35,7 +34,7 @@ class ColorItem extends Component {
   }
 
   /** 删除色块 */
-  handleDelete() {
+  handleDelete = () => {
     const { id, isDelete, isRemove } = this.props;
     const { active } = this.state;
 

@@ -24,14 +24,6 @@ class ColorTheme extends Component {
 
   constructor() {
     super();
-    this.handleColorChange = this.handleColorChange.bind(this);
-    this.handleBgChange = this.handleBgChange.bind(this);
-    this.handleClickColor = this.handleClickColor.bind(this);
-    this.handleAddColor = this.handleAddColor.bind(this);
-    this.handleDeleteColor = this.handleDeleteColor.bind(this);
-    this.handleAccept = this.handleAccept.bind(this);
-    this.handleCancel = this.handleCancel.bind(this);
-    this.handleChangeComplete = this.handleChangeComplete.bind(this);
     this.state = {
       pickerVisible: false,
       colorArr: [],
@@ -42,7 +34,7 @@ class ColorTheme extends Component {
   }
 
   /** 处理颜色 */
-  handleColorChange(colorArr) {
+  handleColorChange = colorArr => {
     const { type } = this.props;
 
     this.props.onhandleColorChange(colorArr);
@@ -55,7 +47,7 @@ class ColorTheme extends Component {
   }
 
   /** 处理背景 */
-  handleBgChange(bgColor) {
+  handleBgChange = bgColor => {
     this.props.onhandleBgChange(bgColor);
     this.props.onhandleClick(this.props.type);
 
@@ -65,14 +57,14 @@ class ColorTheme extends Component {
   }
 
   /** 处理点击 */
-  handleClickColor(key) {
+  handleClickColor = key => {
     this.setState({
       selected: key,
     });
   }
 
   /** 增加色块 */
-  handleAddColor(colorArr) {
+  handleAddColor = colorArr => {
     this.setState({
       colorArr,
       pickerVisible: true,
@@ -81,7 +73,7 @@ class ColorTheme extends Component {
   }
 
   /** 删除色块 */
-  handleDeleteColor(colors) {
+  handleDeleteColor = colors => {
     const { colorArr } = this.state;
 
     _.remove(colorArr, (curr, index) => colors.indexOf(index) !== -1);
@@ -89,7 +81,7 @@ class ColorTheme extends Component {
   }
 
   /** 处理颜色选择器选择 */
-  handleAccept() {
+  handleAccept = () => {
     const { colorArr, pickerColor } = this.state;
 
     colorArr.push(pickerColor);
@@ -101,7 +93,7 @@ class ColorTheme extends Component {
   }
 
   /** 处理颜色选择器取消 */
-  handleCancel() {
+  handleCancel = () => {
     this.setState({
       pickerVisible: false,
       overlayVisible: 'none',
@@ -109,14 +101,14 @@ class ColorTheme extends Component {
   }
 
   /** 处理颜色选择器修改 */
-  handleChangeComplete(color) {
+  handleChangeComplete = color => {
     this.setState({
       pickerColor: color.hex,
     });
   }
 
   /** 渲染主题 */
-  renderColorTheme() {
+  renderColorTheme = () => {
     const { active, type } = this.props;
 
     return this.props.theme.map((curr, index) => (
@@ -137,7 +129,7 @@ class ColorTheme extends Component {
   }
 
   /** 渲染背景 */
-  renderBg() {
+  renderBg = () => {
     return this.props.theme.map((color, index) => (
       <BackgroundItem
         key={index}

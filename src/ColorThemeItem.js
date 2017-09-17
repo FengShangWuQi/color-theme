@@ -22,11 +22,6 @@ class ColorThemeItem extends Component {
 
   constructor(props) {
     super(props);
-    this.handleThemeChange = this.handleThemeChange.bind(this);
-    this.handleAdd = this.handleAdd.bind(this);
-    this.handleDeleteChange = this.handleDeleteChange.bind(this);
-    this.handleCancelDelete = this.handleCancelDelete.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
     this.state = {
       NUM: this.props.color.length,
       isRemove: false,
@@ -44,7 +39,7 @@ class ColorThemeItem extends Component {
   }
 
   /** 处理主题 */
-  handleThemeChange() {
+  handleThemeChange () => {
     const { id, color, backgroundColor } = this.props;
 
     this.props.onColorChange(color);
@@ -55,14 +50,14 @@ class ColorThemeItem extends Component {
   }
 
   /** 增加色块 */
-  handleAdd() {
+  handleAdd () => {
     if (!this.state.isRemove) {
       this.props.onAddChange(this.props.color);
     }
   }
 
   /** 处理删除色块 */
-  handleDeleteChange(key) {
+  handleDeleteChange = (key) => {
     const { removeItems } = this.state;
 
     removeItems.push(key);
@@ -72,7 +67,7 @@ class ColorThemeItem extends Component {
   }
 
   /** 取消删除色块 */
-  handleCancelDelete(key) {
+  handleCancelDelete = (key) => {
     const { removeItems } = this.state;
 
     const index = removeItems.indexOf(key);
@@ -85,7 +80,7 @@ class ColorThemeItem extends Component {
   }
 
   /** 删除色块 */
-  handleDelete() {
+  handleDelete () => {
     const { isRemove, removeItems } = this.state;
 
     if (isRemove && removeItems.length !== 0) {
