@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/constants.js"],"names":["SELECTSTYLE","borderColor","boxShadow"],"mappings":";;;;;;AACA;AACO,IAAMA,oCAAc;AACzBC,eAAa,SADY;AAEzBC,aAAW;AAFc,CAApB","file":"constants.js","sourcesContent":["\n/** 选中的状态 */\nexport const SELECTSTYLE = {\n  borderColor: '#49a9ee',\n  boxShadow: '0 0 0 2px rgba(16, 142, 233, 0.2)',\n};\n"]}
