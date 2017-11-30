@@ -4,7 +4,25 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _react = require('react');
 
@@ -28,19 +46,13 @@ require('./style.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 var ColorTheme = function (_Component) {
-  _inherits(ColorTheme, _Component);
+  (0, _inherits3.default)(ColorTheme, _Component);
 
   function ColorTheme() {
-    _classCallCheck(this, ColorTheme);
+    (0, _classCallCheck3.default)(this, ColorTheme);
 
-    var _this = _possibleConstructorReturn(this, (ColorTheme.__proto__ || Object.getPrototypeOf(ColorTheme)).call(this));
+    var _this = (0, _possibleConstructorReturn3.default)(this, (ColorTheme.__proto__ || (0, _getPrototypeOf2.default)(ColorTheme)).call(this));
 
     _this.handleColorChange = function (colorArr) {
       var type = _this.props.type;
@@ -81,11 +93,11 @@ var ColorTheme = function (_Component) {
       var colorArr = _this.state.colorArr;
 
 
-      colorArr.forEach(function (curr, index) {
-        if (colors.indexOf(index) !== -1) {
-          colorArr.splice(index, 1);
+      for (var i = colorArr.length - 1; i >= 0; i--) {
+        if (colors.indexOf(i) !== -1) {
+          colorArr.splice(i, 1);
         }
-      });
+      }
       _this.props.onhandleColorChange(colorArr);
     };
 
@@ -162,7 +174,7 @@ var ColorTheme = function (_Component) {
     return _this;
   }
 
-  _createClass(ColorTheme, [{
+  (0, _createClass3.default)(ColorTheme, [{
     key: 'render',
     value: function render() {
       var _state = this.state,
@@ -197,7 +209,6 @@ var ColorTheme = function (_Component) {
       );
     }
   }]);
-
   return ColorTheme;
 }(_react.Component);
 

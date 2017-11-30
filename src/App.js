@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ColorTheme from 'ColorTheme';
+import ColorTheme from 'color-theme';
 import ReactEchartsCore from 'echarts-for-react/lib/core';
 import echarts from 'echarts/lib/echarts';
 import 'echarts/lib/chart/bar';

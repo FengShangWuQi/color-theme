@@ -3,8 +3,14 @@
   "main": "index.html",
   "author": "fengshangwuqi",
   "homepage": "https://github.com/FengShangWuQi/color-theme",
-  "keywords": ["react", "color", "theme", "color-theme"],
+  "keywords": [
+    "react",
+    "color",
+    "theme",
+    "color-theme"
+  ],
   "dependencies": {
+    "color-theme": "^1.0.2",
     "echarts-for-react": "^1.4.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

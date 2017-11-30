@@ -15,7 +15,7 @@
 [license-url]: https://github.com/FengShangWuQi/color-theme/blob/master/LICENSE
 
 ## Demo
-- [切换 ECharts 图表颜色主题](https://fengshangwuqi.github.io/color-theme-demo/)
+- [切换 ECharts 图表颜色主题](https://fengshangwuqi.github.io/color-theme)
 
 ## 安装
 ```

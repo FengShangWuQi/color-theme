@@ -68,11 +68,11 @@ class ColorTheme extends Component {
   handleDeleteColor = colors => {
     const { colorArr } = this.state;
 
-    colorArr.forEach((curr, index) => {
-      if (colors.indexOf(index) !== -1) {
-        colorArr.splice(index, 1);
+    for (let i = colorArr.length - 1; i >= 0; i--) {
+      if (colors.indexOf(i) !== -1) {
+        colorArr.splice(i, 1);
       }
-    });
+    }
     this.props.onhandleColorChange(colorArr);
   };
 
