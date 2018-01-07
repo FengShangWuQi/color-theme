@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/utils.js"],"names":["getSelectedStyle","borderColor","boxShadow"],"mappings":";;;;;AAAO,IAAMA,8CAAmB,SAAnBA,gBAAmB;AAAA,SAAO;AACrCC,iBAAa,SADwB;AAErCC,eAAW;AAF0B,GAAP;AAAA,CAAzB","file":"utils.js","sourcesContent":["export const getSelectedStyle = () => ({\n  borderColor: '#49a9ee',\n  boxShadow: '0 0 0 2px rgba(16, 142, 233, 0.2)',\n});\n"]}
