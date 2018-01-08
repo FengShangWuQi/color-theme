@@ -91,6 +91,8 @@ class ColorThemeItem extends Component {
   };
 
   handleDelete = e => {
+    const { id, colorTheme } = this.props;
+    const { index } = colorTheme.toJS();
     const { isRemove, removeItems } = this.state;
 
     if (isRemove && removeItems.length !== 0) {
@@ -104,7 +106,9 @@ class ColorThemeItem extends Component {
         isRemove: !isRemove,
       });
     }
-    e.stopPropagation();
+    if (id === index) {
+      e.stopPropagation();
+    }
   };
 
   render() {
